@@ -25,7 +25,7 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-@app.route("/")
+@app.route("/index")
 def index():
     if request.method == "POST":
         rqs = request.form.get("id")
